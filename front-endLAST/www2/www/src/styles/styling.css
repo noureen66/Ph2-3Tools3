@@ -1,0 +1,237 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Body Styling */
+body {
+    background-color: #FFFDD0; /* Soft off-white background */
+    color: #333; /* Dark gray for text */
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Glass Effect */
+.glass-effect {
+    background: rgba(255, 255, 255, 0.3); /* Slightly transparent white */
+    border-radius: 15px;
+    backdrop-filter: blur(12px); /* Frosted glass effect */
+    -webkit-backdrop-filter: blur(12px); /* Safari */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 30px;
+    margin: 20px;
+    color: #333;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Sections (Glass Effect) */
+.card {
+    background: rgba(255, 255, 255, 0.2); /* Slightly transparent white for visibility */
+    border-radius: 15px;
+    padding: 40px;
+    margin: 20px;
+    backdrop-filter: blur(12px); /* Frosted glass effect */
+    -webkit-backdrop-filter: blur(12px); /* Safari */
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow for depth */
+}
+
+/* Main Container */
+.container {
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    background-color: #FFFDD0; /* Soft off-white background */
+    padding: 40px;
+    margin-top: 50px;
+}
+
+/* Content Wrapper */
+.content {
+    width: 80%;
+    max-width: 1200px;
+    margin: 30px;
+}
+
+/* Header */
+h1, h2 {
+    color: #2c3e50; /* Dark text for readability */
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Table Styling */
+table {
+    width: 70%; /* Reduced width */
+    max-width: 800px; /* Max width */
+    border-collapse: collapse;
+    margin: 50px auto; /* Centered table */
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+/* Table Header and Data Styling */
+th, td {
+    padding: 10px; /* Reduced padding */
+    text-align: center;
+    border: 1px solid #ccc;
+    font-size: 14px; /* Smaller font size */
+}
+
+th {
+    background-color: #f39c12; /* Yellow for table header */
+    color: white;
+}
+
+tr {
+    background-color: #f9f3e3; /* Light yellow background */
+}
+
+tr:hover {
+    background-color: #f1e3c1; /* Slightly darker yellow on hover */
+}
+
+/* Global Button Style */
+button, select {
+    padding: 10px 20px;
+    border: 1px solid #f39c12;
+    border-radius: 8px;
+    background-color: #f39c12;
+    color: #fff;
+    font-size: 14px; /* Smaller font size */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 150px; /* Smaller button */
+    margin: 10px;
+}
+
+button:active, select:active {
+    transform: translateY(2px); /* Button press effect */
+}
+
+/* Navbar Styling */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 99%; /* Full width */
+    background-color: #f39c12; /* Yellow navbar */
+    padding: 15px 0;
+    z-index: 1000; /* Ensure navbar stays on top */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Soft shadow */
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center; /* Centered navbar items */
+    gap: 30px; /* Space between items */
+}
+
+nav a {
+    color: #2c3e50; /* Dark links for readability */
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #e67e22; /* Darker yellow on hover */
+    color: #fff; /* White text on hover */
+}
+
+/* Footer Styling */
+footer {
+    background-color: #f39c12; /* Yellow footer */
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Scroll Styling */
+body, html {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+/* General Page Layout */
+div {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+}
+
+/* Active Section Color */
+.admin.active .card, .client.active .card, .courier.active .card {
+    background: rgba(255, 255, 255, 0.15); /* Slightly more opaque for active cards */
+}
+
+/* Button Hover Effect */
+button:hover, select:hover {
+    background-color: #e67e22; /* Darker yellow on hover */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Glass Effect Card */
+.card {
+    background: rgba(255, 255, 255, 0.1); /* Slight transparency */
+    border-radius: 15px;
+    padding: 40px;
+    margin: 20px;
+    backdrop-filter: blur(12px); /* Glass effect */
+    -webkit-backdrop-filter: blur(12px); /* Safari */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Soft shadow */
+}
+
+/* Page-Specific Styles */
+.admin, .client, .courier {
+    display: none;
+}
+
+.admin.active, .client.active, .courier.active {
+    display: block;
+}
+
+/* Form Styling */
+form {
+    display: grid;
+    justify-content: space-around;
+    align-content: space-between;
+    gap: 20px; /* Space between form elements */
+}
+
+label {
+    text-align: left;
+    align-self: flex-start; /* Align labels to the left */
+    margin-bottom: 5px; /* Margin below labels */
+}
+
+input, select, button {
+    max-width: 300px; /* Max width for form elements */
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #f39c12; /* Yellow border on focus */
+    box-shadow: 0 0 6px rgba(243, 156, 18, 0.5); /* Yellow glow on focus */
+}

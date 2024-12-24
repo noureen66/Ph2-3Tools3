@@ -1,0 +1,102 @@
+/* Animation for moving shapes */
+@keyframes moveShape {
+    0% {
+      transform: translateX(0); /* Start position */
+    }
+    50% {
+      transform: translateX(600px); /* Wider motion range (300px to 600px) */
+    }
+    100% {
+      transform: translateX(0); /* Return to start */
+    }
+  }
+  
+  /* Body Styling */
+  body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #fef8e4; /* Light yellow background */
+    overflow: hidden; /* Prevents scrollbars */
+    position: relative;
+  }
+  
+  /* Shape Styling (Circles turned into boxes) */
+  .shape {
+    position: absolute;
+    background-color: rgba(243, 156, 18, 0.6); /* Yellow with transparency */
+    animation: moveShape 5s linear infinite; /* Simple motion animation */
+  }
+  
+  /* Tape-like box styling (Package box inspired) */
+  .shape-tape {
+    position: absolute;
+    background-color: rgba(243, 156, 18, 0.9); /* Darker yellow for package-like box */
+    border-radius: 10px; /* Rounded corners like package boxes */
+    animation: moveShape 8s linear infinite; /* Slower animation for package boxes */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for package effect */
+  }
+  
+  /* Shape Sizes and Initial Positions */
+  .shape-1 {
+    width: 80px;
+    height: 80px;
+    top: 10%;
+    left: 20%;
+    animation-duration: 6s; /* Different speed for this shape */
+  }
+  
+  .shape-2 {
+    width: 100px;
+    height: 100px;
+    top: 30%;
+    left: 50%;
+    animation-duration: 5s; /* Different speed for this shape */
+  }
+  
+  .shape-3 {
+    width: 120px;
+    height: 120px;
+    top: 60%;
+    left: 70%;
+    animation-duration: 7s; /* Different speed for this shape */
+  }
+  
+  .shape-4 {
+    width: 60px;
+    height: 60px;
+    top: 80%;
+    left: 40%;
+    animation-duration: 4s; /* Different speed for this shape */
+  }
+  
+  /* New Tape Boxes - Package Box Shapes with Wider Motion Range */
+  .shape-tape-1 {
+    width: 150px;
+    height: 80px; /* Taller boxes for better package look */
+    top: 15%;
+    left: 25%;
+  }
+  
+  .shape-tape-2 {
+    width: 180px;
+    height: 100px; /* Taller boxes for better package look */
+    top: 40%;
+    left: 55%;
+  }
+  
+  .shape-tape-3 {
+    width: 220px;
+    height: 120px; /* Taller boxes for better package look */
+    top: 70%;
+    left: 65%;
+  }
+  
+  .shape-tape-4 {
+    width: 180px;
+    height: 90px; /* Taller boxes for better package look */
+    top: 85%;
+    left: 35%;
+  }
+  

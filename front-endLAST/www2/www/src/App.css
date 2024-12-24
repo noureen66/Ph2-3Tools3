@@ -1,0 +1,56 @@
+.App {
+  font-family: Arial, sans-serif; /* Set a clean font */
+  text-align: center; /* Center-align text */
+  padding: 20px; /* Add padding around the app */
+  background-image: url('./assets/bg3.jpg');
+  background-size: cover; /* Cover the entire area */
+  background-repeat: no-repeat; /* Prevent image repetition */
+  min-height: 100vh; /* Ensure the app takes up full height */
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack children vertically */
+  justify-content: center; /* Center items vertically */
+  position: relative; /* Position relative for z-index to work */
+  animation: changeBackground 15s infinite; /* Change background every 15 seconds */
+}
+
+@keyframes changeBackground {
+  0% {
+    background-image: url('./assets/bg3.jpg');
+  }
+  33% {
+    background-image: url('./assets/bg2.jpg');
+  }
+  66% {
+    background-image: url('./assets/bg.jpg');
+  }
+  100% {
+    background-image: url('./assets/bg3.jpg'); /* Loop back to the first image */
+  }
+}
+/* Title Styles */
+.title {
+  font-size: 2.5em; /* Large title size */
+  color: #333; /* Darker color for the title */
+  margin-bottom: 20px; /* Space below the title */
+  position: relative; /* Ensures the title is above the background */
+  z-index: 1; /* Make sure the title is above the background */
+}
+
+/* Navigation Styles */
+.options {
+  margin-bottom: 30px; /* Space below the navigation */
+}
+
+.option {
+  text-decoration: none; /* Remove underline from links */
+  color: #fff; /* White text color */
+  background-color: #000000; /* Button color */
+  padding: 10px 20px; /* Padding for buttons */
+  border-radius: 5px; /* Rounded corners */
+  margin: 0 10px; /* Space between buttons */
+  transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+.option:hover {
+  background-color: #212422; /* Darker shade on hover */
+}
